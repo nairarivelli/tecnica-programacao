@@ -1,0 +1,11 @@
+import array
+
+# cria uma array de inteiros
+fila_senhas = array.array('i')
+
+# adiciona uma senha
+senha = 1234
+fila_senhas.append(senha)
+
+# remove a primeira senha
+proxima_senha = fila_senhas.pop(0)
