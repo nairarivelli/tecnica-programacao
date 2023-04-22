@@ -1,0 +1,27 @@
+senha_atual = 0
+fila_senhas = []
+
+while True:
+    print("\n== Menu ==")
+    print("1. Gerar senha")
+    print("2. Mostrar senha")
+    print("3. Sair")
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        senha_atual += 1
+        fila_senhas.append(senha_atual)
+        print(f"Senha gerada: {senha_atual}")
+    elif opcao == "2":
+        if len(fila_senhas) > 0:
+            proxima_senha = fila_senhas.pop(0)
+            print(f"Próxima senha: {proxima_senha}")
+        else:
+            print("Não há senhas na fila.")
+    elif opcao == "3":
+        break
+    else:
+        print("Opção inválida.")
+
+print("Sistema encerrado.")
